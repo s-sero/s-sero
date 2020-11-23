@@ -1,0 +1,391 @@
+@font-face {
+    font-family: NeogreyMedium;
+    src: url(../font/Neogrey-Medium.otf);
+}
+
+.int-font-family{
+    font-family: NeogreyMedium;
+}
+
+body{
+    padding-bottom: 20px;
+    background-image: url("../image/limit_footer.png") !important;
+    height:100% !important;
+}
+::-webkit-scrollbar{display: none}  /*去掉滚动条*/
+.ant-layout{
+    background-image: url("../image/bg.png") !important;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #02195a;
+}
+.site-layout-background{
+    /*background-image: url('../image/limit.png');*/
+    /*background-size: 100%;*/
+    /*background-repeat: no-repeat;*/
+    /*height:100%;*/
+    /* width: 100%; */
+}
+.text-center{
+    text-align: center;
+}
+
+.head-ct{
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+
+.head-ct2{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.Userbg,.Userbg2{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.Userbg2{
+    margin-top: 20px;
+}
+.User{
+    width: 177px;
+    background-image: url('../image/wallet.png');
+    background-size: cover;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.pay{
+    background-color: #139bed;
+    border-radius: 20px;
+    outline: none;
+}
+.InviteUrl{
+    width:96%;
+    border:1px dotted #00b7ee;
+}
+.ant-space-item{
+    display: flex;
+    justify-content: space-between;
+}
+ .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active, .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab-active{
+    color: #fff;
+    background-color: #02195a;
+    border:none;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.walletI{
+    width: 100% !important;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.ant-modal-content{
+    background-color: #02195a !important;
+}
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab:not(:last-of-type), .ant-tabs-card.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-tab:not(:last-of-type), .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab:not(:last-of-type), .ant-tabs-card.ant-tabs-bottom > div > .ant-tabs-nav .ant-tabs-tab:not(:last-of-type){
+    margin:0 5px;
+    border:none;
+    text-align: center;
+    background-color: #20befc;
+    padding: 5px 28px;
+}  
+.ant-tabs-nav-wrap{  /* tab的父元素*/
+    z-index: 99;
+    position: relative;
+    top:1px;
+    left: 0;
+}
+.ant-tabs-tab{        /* tabs */
+    border-left:2px solid #20befc !important;
+    border-top:2px solid #20befc !important;
+    border-right:2px solid #20befc !important;
+    height: 24px;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: #fff;
+}
+.ant-tabs-tab-active{   /*Info s3 s6 被选中的*/
+    background-color:#02195a !important;
+
+}
+.ant-tabs-tab-btn{
+    width:14px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box !important;
+}
+.Infos{
+    display: inline-block;
+    margin-left: 20px;
+}
+.ant-tabs > .ant-tabs-nav, .ant-tabs > div > .ant-tabs-nav{position: static;}
+.break{
+    word-wrap: break-word;
+}
+.address{
+    width: 100%;
+}
+.Assets{
+    padding:0 !important;
+    align-items: center;
+    
+}
+.ant-row{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+.ant-space .ant-space-horizontal .ant-space-align-center .walletI .flex{
+    display: flex;
+    justify-content: space-between !important;
+}
+.btn{
+    outline: none;
+    border:none;
+    background-color: unset;
+    color: #fff;
+}
+.ant-col-xs-12,.ant-col-sm-12,.ant-col-md-8,.ant-col-lg-6,.ant-col-xl-4,.ant-col-xxl-4{
+    margin-top: 8px;
+}
+/* 
+.ant-tabs-content{
+    width:100%;
+    height:100%;
+    background:#20befc;
+    background:linear-gradient(-45deg,transparent 15px, #20befc 0) bottom right,
+
+    linear-gradient(45deg,transparent 15px, #20befc 0) bottom left,
+
+    linear-gradient(135deg,transparent 15px, #20befc 0) top left,
+
+    linear-gradient(-135deg,transparent 15px,#20befc 0) top right;
+
+    background-size: 50% 50%;
+
+    background-repeat: no-repeat;
+}  */
+/* .basis{
+    width: 98.6%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0.7%;
+    background:#02195a;
+    background:linear-gradient(-45deg,transparent 15px, #02195a 0) bottom right,
+
+    linear-gradient(45deg,transparent 15px, #02195a 0) bottom left,
+
+    linear-gradient(135deg,transparent 15px, #02195a 0) top left,
+
+    linear-gradient(-135deg,transparent 15px,#02195a 0) top right;
+
+    background-size: 50% 50%;
+
+    background-repeat: no-repeat;
+}  */
+.foin{
+    background-color: #20befc;
+    width:100%;
+    height: 100%;
+    padding-top: 1px;
+    padding-bottom: 1.5px;
+    padding-left: 1.5px;
+    z-index: 1;
+    background:linear-gradient(-45deg,transparent 15px, #20befc 0) bottom right,
+    linear-gradient(45deg,transparent 15px, #20befc 0) bottom left,
+    linear-gradient(135deg,transparent 15px, #20befc 0) top left,
+    linear-gradient(-135deg,transparent 15px,#20befc 0) top right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+.info{
+    z-index: 1;
+    background-color: #02195a;
+    padding: 21px 11.1px;
+    width:99.4%;
+    height: 99.4%;
+    background:linear-gradient(-45deg,transparent 15px, #02195a 0) bottom right,
+    linear-gradient(45deg,transparent 15px, #02195a 0) bottom left,
+    linear-gradient(135deg,transparent 15px, #02195a 0) top left,
+    linear-gradient(-135deg,transparent 15px,#02195a 0) top right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    margin: 2px auto;
+    width:100%; 
+}
+.footers{
+    width: 83%;
+    height:5px;
+}
+.text-small{ font-size: 12px;}
+.text-large{ font-size: 18px;}
+.text-bold{ font-weight: 600;}
+.ant-tabs-content-holder{border-radius: 5px;}
+.ant-tabs-tabpane{
+    height:100%;
+}
+.ant-tabs-nav{ margin:unset !important;}
+.all{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0 12px 0 5px;
+}
+.info-head{
+    padding:5px 8px 5px 8px;
+}
+.ant-tag-magenta{
+    color:#fff;
+    border:none;
+    background-color: #02195a;
+}
+.btns{
+    background-color: #02195a;
+    outline: none !important;
+    border:none ;
+}
+.my-link{
+    margin:0 10px;
+    padding:4px 0;
+    width: 100%;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+.my-link div{ 
+    padding:5px;
+    font-size: 12px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.item-pr{ padding: 0 15px 15px;}
+.item-cst{  margin-bottom: 10px;}
+.item-border{
+    width: 100%;
+    height: 30px;
+    border:1px solid #20befc;
+    padding: 3px;
+    background-color: #00b0c2;
+    border-radius: 5px;
+}
+
+.circle{
+    width: 100%;
+    padding: 5px;
+}
+
+.circle-div{
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    /* border: 1px solid #f800d2; */
+}
+.static{
+    margin: 15px 24px;
+}
+
+.left-icon{
+    position: absolute;
+    top: -9px;
+    left: 4px;
+}
+
+.icon-s0{font-size: 20px; color:#0091E9;}
+.icon-s1{ font-size: 20px; color: #e9e579;}
+.user-s1{ font-size: 15px;  /* color:#f800d2; */}
+.user-s2{font-size: 15px;color:#0091E9;}
+
+.num{
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    color: #4e6edd;
+}
+.wallet-info{
+    padding:8px 3px;
+    border-radius: 5px;
+    width: 100%;
+    background-image: url("../image/User.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 126px;
+}
+.Income{
+    color: #00b7ee;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.non-active{
+    border-radius: 25px;
+    padding: 3px;
+    border: 1px solid;
+}
+
+.active{
+    border-radius: 25px;
+    padding: 3px;
+    border: 1px solid;
+    background: #0080cc;
+    font-size: 15px;
+}
+
+.overflow-partner{
+    border-radius: 25px;
+    padding: 3px;
+    border: 1px solid;
+     background: #f800d2;
+    font-size: 15px;
+}
+
+.overflow{
+    border-radius: 25px;
+    padding: 3px;
+    border: 1px solid;
+    background: #2afc30;
+    font-size: 15px;
+}
+
+.bottom-up{
+    border-radius: 25px;
+    padding: 3px;
+    border: 1px solid;
+    background: #fd6321 ;
+    font-size: 15px;
+}
+
+
+
+.Input{
+    /* height: 70px; */
+    /* display:flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    /* padding: 15px 10px; */
+}
+.jackpot{
+    padding: 6px 0;
+    text-align: left;
+}
+
+.ant-spin-text{
+    color: #fff;
+    font-size: 20px;
+}
+
+.ant-spin-dot-spin{
+    color: #fff;
+}
