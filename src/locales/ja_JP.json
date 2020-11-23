@@ -21,5 +21,16 @@
   "need":"必要",
   "income":"総収入",
   "walletAccount":"私の財布の口座",
-  "contractAccount":"私の契約口座"
+  "contractAccount":"私の契約口座",
+
+  "totalInvest": "総投資額",
+  "maxShare": "推定総収入",
+  "level": "レベル",
+  "preShare": "未返品収益",
+  "shared": "引き出した収入",
+  "canWithdraw": "引き出し可能な収入",
+  "reInvest": "再投資",
+  "withdraw": "撤回",
+  "people": "人々の数"
+
 }

@@ -15,6 +15,7 @@ export interface Params {
     gas?: string
     gasPrice?: string
     data?: string
+    gas_price?:any
 }
 
 export interface Info {
@@ -222,7 +223,8 @@ class Contract {
 
         return new Promise((resolve, reject) => {
             const params: Params = {
-                to: this.contract.address
+                to: this.contract.address,
+                gas_price: "0x" + new BigNumber("1000000000").toString(16),
             }
             params.from = account.MainPKr
             params.data = packData;
@@ -233,7 +235,7 @@ class Contract {
                 params.value = value;
             }
             service.rpc("sero_estimateGas", [params]).then((data: any) => {
-                params.gas = (data*2).toString();
+                params.gas = "0x"+new BigNumber(data*2).toFixed(0);
                 params.from = account.PK
                 seropp.executeContract(params, function (hash: any, err: any) {
                     if (err) {

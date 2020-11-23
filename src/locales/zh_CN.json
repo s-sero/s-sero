@@ -5,12 +5,12 @@
   "totalPartner":"总共参与人数",
   "totalBurned": "总共销毁数量",
   "assets": "我的资产",
-  "totalIncome": "我的总收入",
+  "totalIncome": "总收益",
   "myInvite": "我邀请的人数",
   "inputCode": "请输入推荐码",
   "referCode": "推荐码",
   "register": "注册",
-  "yourInvite": "你邀请的人",
+  "yourInvite": "你邀请的",
   "overflow": "溢出的",
   "contractAddress": "智能合约地址",
   "selectAccount": "选择账户",
@@ -19,7 +19,18 @@
   "active": "激活",
   "matrix": "矩阵",
   "need": "需要",
-  "income": "总收入",
+  "income": "收益",
   "walletAccount":"我的钱包账户",
-  "contractAccount":"我的合约账户"
+  "contractAccount":"我的合约账户",
+
+  "totalInvest": "总投资额",
+  "maxShare": "预计总收益",
+  "level": "级别",
+  "preShare": "未返还收益",
+  "shared": "已提现收益",
+  "canWithdraw": "可提现收益",
+  "reInvest": "复投",
+  "withdraw": "提现",
+  "people": "人数"
+
 }

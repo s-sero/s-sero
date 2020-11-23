@@ -21,5 +21,15 @@
   "need": "필요",
   "income": "소득",
   "walletAccount":"내 지갑 계좌",
-  "contractAccount":"내 계약 계좌"
+  "contractAccount":"내 계약 계좌",
+
+  "totalInvest": "총 투자",
+  "maxShare": "예상 수입",
+  "level": "레벨",
+  "preShare": "반환되지 않음",
+  "shared": "철회 됨",
+  "canWithdraw": "인출 가능",
+  "reInvest": "재투자",
+  "withdraw": "철회",
+  "people": "사람"
 }

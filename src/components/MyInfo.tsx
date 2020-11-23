@@ -25,10 +25,22 @@ const MyInfo:React.FC<Props> = ({info,account,setRefCode,register,detail,reward,
             maxLevel = i+1;
         }
     }
-    let value = "0.000";
-    if(account && account.Balance){
-        value = fromValue(account.Balance.get(config.useCoin),18).toFixed(3,1)
-    }
+    // let value = "0.000";
+    // let balance = account && account.Balance;
+    // if(balance && !(balance instanceof Map)){
+    //     const keys = Object.keys(balance);
+    //     const tmp:Map<string,string> = new Map();
+    //     for(let key of keys){
+    //         tmp.set(key,balance[key])
+    //     }
+    //     if(tmp.size == 0){
+    //         tmp.set(config.useCoin,"0")
+    //     }
+    //     balance = tmp;
+    // }
+    // if(balance){
+    //     value = fromValue(balance.get(config.useCoin),18).toFixed(3,1)
+    // }
 
     return <>
             <div className="foin">
@@ -63,30 +75,30 @@ const MyInfo:React.FC<Props> = ({info,account,setRefCode,register,detail,reward,
                  <div className="text-center text-large">
                      <Descriptions title="推荐收益" column={2}>
                          <Descriptions.Item label="" span={3}><Statistic title={i18n.t("totalIncome")}  precision={3} value={x3Income.plus(x6Income).toFixed(3,1)} /></Descriptions.Item>
-                         <Descriptions.Item label=""><Statistic title="X3收入" precision={3} value={x3Income.toFixed(3,1)} /></Descriptions.Item>
-                         <Descriptions.Item label=""><Statistic title="X4收入" precision={3} value={x6Income.toFixed(3,1)} /></Descriptions.Item>
+                         <Descriptions.Item label=""><Statistic title={`X3${i18n.t("income")}`} precision={3} value={x3Income.toFixed(3,1)} /></Descriptions.Item>
+                         <Descriptions.Item label=""><Statistic title={`X4${i18n.t("income")}`} precision={3} value={x6Income.toFixed(3,1)} /></Descriptions.Item>
                      </Descriptions>
                      <Divider dashed/>
                      <Descriptions title="VIP收益" column={2}>
-                         <Descriptions.Item label=""><Statistic title={"总投资额"}  value={investAmount.toNumber()} precision={3} /></Descriptions.Item>
-                         <Descriptions.Item label=""><Statistic title={"预计总收益"}  value={maxLevel >= 9?investAmount.multipliedBy(2).toNumber():0} precision={3} /></Descriptions.Item>
+                         <Descriptions.Item label=""><Statistic title={i18n.t("totalInvest")}  value={investAmount.toNumber()} precision={3} /></Descriptions.Item>
+                         <Descriptions.Item label=""><Statistic title={i18n.t("maxShare")}  value={maxLevel >= 9?investAmount.multipliedBy(2).toNumber():0} precision={3} /></Descriptions.Item>
 
-                         <Descriptions.Item label=""><Statistic title="VIP级别"  value={maxLevel >= 9?maxLevel:0}/></Descriptions.Item>
-                         <Descriptions.Item label=""><Statistic title="未返还收益" precision={3} value={maxLevel >= 9?investAmount.multipliedBy(2).minus(shareIncome).toNumber():0}/></Descriptions.Item>
-                         <Descriptions.Item label=""><Statistic title="已提现收益" precision={3} value={info.shareIncome.toFixed(3,1)} suffix=""/></Descriptions.Item>
-                         <Descriptions.Item label=""><Statistic title="可提现收益" precision={3} value={info.dayReward.toFixed(3,1)} suffix=""/></Descriptions.Item>
+                         <Descriptions.Item label=""><Statistic title={`VIP${i18n.t("level")}`}  value={maxLevel >= 9?maxLevel:0}/></Descriptions.Item>
+                         <Descriptions.Item label=""><Statistic title={i18n.t("preShare")} precision={3} value={maxLevel >= 9?investAmount.multipliedBy(2).minus(shareIncome).toNumber():0}/></Descriptions.Item>
+                         <Descriptions.Item label=""><Statistic title={i18n.t("shared")} precision={3} value={info.shareIncome.toFixed(3,1)} suffix=""/></Descriptions.Item>
+                         <Descriptions.Item label=""><Statistic title={i18n.t("canWithdraw")} precision={3} value={info.dayReward.toFixed(3,1)} suffix=""/></Descriptions.Item>
 
                      </Descriptions>
                      <Row>
                          <Col span={11}>
                              {
-                                 maxLevel >= 9 && <Button size="small" type="primary" danger onClick={reInvest} block>复投</Button>
+                                 maxLevel >= 9 && <Button size="small" type="primary" danger onClick={reInvest} block>{i18n.t("reInvest")}</Button>
                              }
                          </Col>
                          <Col span={2}/>
                          <Col span={11}>
                              {
-                                 info.dayReward.toNumber()>0 ? <Button size="small" type="primary" onClick={reward} block>提现</Button>:
+                                 info.dayReward.toNumber()>0 ? <Button size="small" type="primary" onClick={reward} block>{i18n.t("withdraw")}</Button>:
                                      <Statistic.Countdown title="" value={((detail.dayIndex+1)*24*60*60-8*60*60)*1000} format="HH:mm:ss" onFinish={doUpdate} />
                              }
                          </Col>
@@ -99,11 +111,11 @@ const MyInfo:React.FC<Props> = ({info,account,setRefCode,register,detail,reward,
                      {/*    </Descriptions.Item>*/}
                      {/*</Descriptions>*/}
                      {/*<Divider dashed/>*/}
-                     <Descriptions title="VIP人数" column={4}>
-                         <Descriptions.Item label=""><Statistic title="LEVEL9" suffix="人" value={detail.levelCountArr[8]}/></Descriptions.Item>
-                         <Descriptions.Item label=""><Statistic title="LEVEL10" suffix="人"  value={detail.levelCountArr[9]}/></Descriptions.Item>
-                         <Descriptions.Item label=""><Statistic title="LEVEL11" suffix="人"  value={detail.levelCountArr[10]}/></Descriptions.Item>
-                         <Descriptions.Item label=""><Statistic title="LEVEL12" suffix="人"  value={detail.levelCountArr[11]}/></Descriptions.Item>
+                     <Descriptions title={`VIP${i18n.t("people")}`} column={4}>
+                         <Descriptions.Item label=""><Statistic title="LEVEL9" value={detail.levelCountArr[8]}/></Descriptions.Item>
+                         <Descriptions.Item label=""><Statistic title="LEVEL10" value={detail.levelCountArr[9]}/></Descriptions.Item>
+                         <Descriptions.Item label=""><Statistic title="LEVEL11" value={detail.levelCountArr[10]}/></Descriptions.Item>
+                         <Descriptions.Item label=""><Statistic title="LEVEL12" value={detail.levelCountArr[11]}/></Descriptions.Item>
                      </Descriptions>
                      {/*<Descriptions title="我的分红" column={2}>*/}
                      {/*    */}

@@ -21,5 +21,15 @@
   "need": "трэба",
   "income": "Даход",
   "walletAccount":"Мой рахунак паперніка",
-  "contractAccount":"Мой рахунак кантракту"
+  "contractAccount":"Мой рахунак кантракту",
+
+  "totalInvest": "Усяго інвеставаць",
+  "maxShare": "Прыблізны прыбытак",
+  "level": "узровень",
+  "preShare": "Не вярнуў",
+  "shared": "Адклікана",
+  "canWithdraw": "Здымаецца",
+  "reInvest": "ReInvest",
+  "remove": "Вывесці",
+  "people": "людзі"
 }

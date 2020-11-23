@@ -1,6 +1,6 @@
 export const levelPrice:number = 5;
 export const useCoin:string = "SERO";
-export const address:string = "5jNVwZF4FWKTyU5czJ54Gz1LPwiTYEHUzDvhzyyms6hHx5wAFHb9KoG9UAtz2pfQCaUR3tmhS5w3BWfheu8FxZdp"
+export const address:string = "MavfHg6cvKkbvMjZKyBAumLHwo69vzeWhqp74tMLa7kJLaa2ZxEqbZQS2WRzNWj2riNgG1eDgyu9zA5ZTVBgayb"
 
 export const abi:any = [
     {
@@ -528,6 +528,22 @@ export const abi:any = [
             },
             {
                 "name": "addr1",
+                "type": "address"
+            },
+            {
+                "name": "addr2",
+                "type": "address"
+            },
+            {
+                "name": "addr3",
+                "type": "address"
+            },
+            {
+                "name": "addr4",
+                "type": "address"
+            },
+            {
+                "name": "addr5",
                 "type": "address"
             }
         ],

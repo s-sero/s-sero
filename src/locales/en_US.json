@@ -21,5 +21,15 @@
   "need": "need",
   "income": "Income",
   "walletAccount":"My wallet account",
-  "contractAccount":"My contract account"
+  "contractAccount":"My contract account",
+
+  "totalInvest": "Total Invest",
+  "maxShare": "Estimated Earnings",
+  "level": "Level",
+  "preShare": "Unreturned",
+  "shared": "Withdrawn",
+  "canWithdraw": "Withdrawable",
+  "reInvest": "ReInvest",
+  "withdraw": "Withdraw",
+  "people": "People"
 }

@@ -352,8 +352,20 @@ class App extends React.Component<any,State> {
 
         console.log(detail,"detail")
         let value:any = '0.000'
-        if(account && account.Balance){
-            value = utils.fromValue(account.Balance.get(config.useCoin),18).toFixed(3,1)
+        let balance = account && account.Balance;
+        if(balance && !(balance instanceof Map)){
+            const keys = Object.keys(balance);
+            const tmp:Map<string,string> = new Map();
+            for(let key of keys){
+                tmp.set(key,balance[key])
+            }
+            if(tmp.size == 0){
+                tmp.set(config.useCoin,"0")
+            }
+            balance = tmp;
+        }
+        if(balance){
+            value = utils.fromValue(balance.get(config.useCoin),18).toFixed(3,1)
         }
         // let startMainPKr = account.MainPkr.substr(0,15);
         // let endMainPKr = account.MainPKr.substring(account.MainPKr.length-15);
@@ -437,29 +449,6 @@ class App extends React.Component<any,State> {
 
 
                         <div className="Next">
-
-                            {/*<div className="Userbg">*/}
-                            {/*    <div className="User">{i18n.t("walletAccount")}</div>*/}
-                            {/*</div>*/}
-
-                            {/*<div className="text-center  wallet-info">*/}
-                            {/*    <div  className="all">*/}
-                            {/*        <Space className="walletI flex">*/}
-                            {/*            <Tag color="magenta" ><span className=" all text-large text-bold">{account.Name}({utils.ellipsis(account.MainPKr)})</span></Tag>*/}
-                            {/*            <button  className="btn" onClick={()=>{this.showAccountModal()}}>{i18n.t("switch")}</button>*/}
-                            {/*        </Space>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="info-head">*/}
-                            {/*        <div className="text-center text-bold">*/}
-                            {/*            <Statistic title={i18n.t("assets")} value={value} suffix={config.useCoin}/>*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
-
-                            {/*<div className="Userbg2">*/}
-                            {/*    <div className="User">{i18n.t("contractAccount")}</div>*/}
-                            {/*</div>*/}
-
                             <div className="card-container">
                                 <Tabs onChange={callback} type="card">
                                     <TabPane  tab={<span className="text-large text-bold tab-left" >INFO</span>} key="1">
@@ -484,18 +473,12 @@ class App extends React.Component<any,State> {
                                 </div>
                                 <Space direction="vertical">
                                     <Row className="static">
-                                        <Col xs={24} sm={24} md={12} lg={12} xl={6} xxl={6} style={{marginBottom:"12px"}}>
+                                        <Col span={24} style={{marginBottom:"12px"}}>
                                             <UserOutlined className="active"/> {i18n.t("yourInvite")}
                                         </Col>
-                                        <Col xs={24} sm={24} md={12} lg={12} xl={6} xxl={6}  style={{marginBottom:"12px"}}>
+                                        <Col span={24}  style={{marginBottom:"12px"}}>
                                             <UserOutlined className="overflow-partner"/> {i18n.t("overflow")}
                                         </Col>
-                                        {/*<Col xs={24} sm={24} md={12} lg={12} xl={6} xxl={6} style={{marginBottom:"12px"}}>*/}
-                                        {/*    <UserOutlined className="overflow"/>OVERFLOW FROM UP*/}
-                                        {/*</Col>*/}
-                                        {/*<Col xs={24} sm={24} md={12} lg={12} xl={6} xxl={6} style={{marginBottom:"12px"}}>*/}
-                                        {/*    <UserOutlined className="bottom-up"/>PARTNER WHO IS AHEAD OF HIS INVITER*/}
-                                        {/*</Col>*/}
                                     </Row>
                                 </Space>
 
