@@ -1,6 +1,6 @@
 export const levelPrice:number = 5;
 export const useCoin:string = "SERO";
-export const address:string = "MavfHg6cvKkbvMjZKyBAumLHwo69vzeWhqp74tMLa7kJLaa2ZxEqbZQS2WRzNWj2riNgG1eDgyu9zA5ZTVBgayb"
+export const address:string = "3ytHqPtQduynzGBT2iBL2R5t9gsdnPyRJ6DKg5M6Ui4cRwoCEXF3nGaJWo2HQC9PhE6ER4fXkjjZgDV3vrNCvSEG"
 
 export const abi:any = [
     {
